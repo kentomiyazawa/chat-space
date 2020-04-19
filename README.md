@@ -1,4 +1,3 @@
-
 # Chat-space DB設計
 
 ## usersテーブル
