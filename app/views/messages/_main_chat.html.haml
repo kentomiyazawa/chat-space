@@ -1,0 +1,28 @@
+.chat-main
+  .chat-main__header
+    .chat-main__header__left
+      %h2.chat-main__header__left__groupname
+        テックキャンプ
+      %ul.chat-main__header__left__memberlist 
+        Member : 
+        %li.chat-main__header__left__memberlist--member 
+          kento
+    = link_to "Edit", "#", class: "chat-main__header__edit"
+        
+  .chat-main__list
+    .chat-main__list__message
+      .chat-main__list__message__info
+        %p.chat-main__list__message__info__name
+          kento
+        %p.chat-main__list__message__info__time
+          2020/04/21(thu) 09:00:00
+      %p.chat-main__list__message__text
+        眠い！！
+  .chat-main__form
+    %form.chat-main__form__new--message
+      .chat-main__form__new--message__input
+        %input{:placeholder => "type a message", :type => "text", class: "chat-main__form__new--message__input__text"}
+        %label{class: "chat-main__form__new--message__input__image"}
+          =icon('fas', 'photo-video')
+          %input{type: "file",class: "chat-main__form__new--message__input__image__field"}
+      %input{type: "submit", class: "chat-main__form__new--message__send--btn"}
