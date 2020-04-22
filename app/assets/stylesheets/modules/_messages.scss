@@ -53,6 +53,7 @@ $sky-blue: #38aef0;
     &__group {
       background-color: #2f3e51;
       height: calc(100% - 100px);
+      text-decoration: none;
       &__list {
         padding: 20px 20px 40px 20px;
         &__name {
@@ -64,6 +65,9 @@ $sky-blue: #38aef0;
         color: $white;
         font-size: 11px;
         }
+      }
+      &__list a{
+        text-decoration: none;
       }
     }
   }
