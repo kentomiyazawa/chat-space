@@ -87,7 +87,7 @@ $sky-blue: #38aef0;
         &__groupname {
           color: $black;
           font-size: 20px;
-          padding-bottom: 15px;
+          padding-bottom: 10px;
         }
         &__memberlist {
           color: $light-gray;
@@ -119,6 +119,7 @@ $sky-blue: #38aef0;
     &__list {
       background-color: #fafafa;
       height: calc(100vh - 190px);
+      overflow: scroll;
       &__message {
         padding: 35px 0px 11px 40px;
         &__info {
