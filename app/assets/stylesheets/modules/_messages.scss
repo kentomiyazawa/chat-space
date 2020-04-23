@@ -87,7 +87,7 @@ $sky-blue: #38aef0;
         &__groupname {
           color: $black;
           font-size: 20px;
-          padding-bottom: 15px;
+          padding-bottom: 10px;
         }
         &__memberlist {
           color: $light-gray;
@@ -119,6 +119,7 @@ $sky-blue: #38aef0;
     &__list {
       background-color: #fafafa;
       height: calc(100vh - 190px);
+      overflow: scroll;
       &__message {
         padding: 35px 0px 11px 40px;
         &__info {
@@ -145,13 +146,14 @@ $sky-blue: #38aef0;
       background-color: #d2d2d2;
       height: 90px;
       padding: 20px 40px;
-      &__new--message {
+
+      form {
         display: flex;
-        &__input {
+        .form__box {
           display: flex;
           position: relative;
           width: 100%;
-          &__text {
+          &__message {
             height: 50px;
             width: 100%;
             border-style: none;
@@ -162,12 +164,12 @@ $sky-blue: #38aef0;
             top: 10px;
             right: 10px;
             cursor: pointer;
-            &__field {
+            &__hidden {
               display: none;
             }
-          }
+          }  
         }
-        &__send--btn {
+        .form__send--btn {
           width: 100px;
           height: 50px;
           color: $white;
@@ -179,4 +181,3 @@ $sky-blue: #38aef0;
       }
     } 
   }
-
