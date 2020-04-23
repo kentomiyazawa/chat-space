@@ -2,12 +2,13 @@
   .chat-main__header
     .chat-main__header__left
       %h2.chat-main__header__left__groupname
-        テックキャンプ
+        = @group.name
       %ul.chat-main__header__left__memberlist 
         Member : 
         %li.chat-main__header__left__memberlist--member 
-          kento
-    = link_to "Edit", "#", class: "chat-main__header__edit"
+          - @users.each do |user|
+            = user.name
+    = link_to "Edit", edit_group_path(@group), method: :get, class: "chat-main__header__edit"
         
   .chat-main__list
     = render @messages
@@ -15,8 +16,8 @@
   .chat-main__form
     = form_for [@group, @message] do |f|
       .form__box
-        %input{:placeholder => "type a message", :type => "text", class: "form__box__message"}
-        %label{class: "form__box__image"}
-          =icon('fas', 'photo-video')
-          %input{type: "file",class: "form__box__image__hidden"}
-      %input{type: "submit", class: "form__send--btn"}
+        = f.text_field :content, class: 'form__box__message', placeholder: 'type a message'
+        = f.label :image, class: 'form__box__image' do
+          = icon('fas', 'photo-video')
+          = f.file_field :image, class: 'form__box__image__hidden'
+      = f.submit 'Send', class: 'form__send--btn'
