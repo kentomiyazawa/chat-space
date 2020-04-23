@@ -13,7 +13,7 @@
     = render @messages
 
   .chat-main__form
-    %form 
+    = form_for [@group, @message] do |f|
       .form__box
         %input{:placeholder => "type a message", :type => "text", class: "form__box__message"}
         %label{class: "form__box__image"}
