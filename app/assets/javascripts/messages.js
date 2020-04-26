@@ -62,8 +62,8 @@ $(function(){
    })
    .always(function(){
     $('.chat-main__list').animate({ scrollTop: $('.chat-main__list')[0].scrollHeight});
-      $('form')[0].reset();
-      $('.form__send--btn').prop('disabled',false);
+    $('form')[0].reset();
+    $('.form__send--btn').prop('disabled',false);
    })
 })
 });
