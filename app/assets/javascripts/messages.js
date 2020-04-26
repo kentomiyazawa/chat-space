@@ -56,12 +56,14 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.chat-main__list').append(html);
-      $('.chat-main__list').animate({ scrollTop: $('.chat-main__list')[0].scrollHeight});
-      $('form')[0].reset();
-      $('.form__send--btn').prop('disabled',false)
    })
-   .fail(function() {
-     alert("メッセージ送信に失敗しました");
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
+   })
+   .always(function(){
+    $('.chat-main__list').animate({ scrollTop: $('.chat-main__list')[0].scrollHeight});
+      $('form')[0].reset();
+      $('.form__send--btn').prop('disabled',false);
    })
 })
 });
