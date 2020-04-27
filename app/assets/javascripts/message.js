@@ -59,7 +59,7 @@ $(function(){
       }
     })
     .fail(function(){
-      alert('erroe');
+      alert('error');
     });
    };
 
